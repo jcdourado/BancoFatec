@@ -2,7 +2,7 @@
     pageEncoding="UTF-8"%>
 <jsp:include page="cabecalho.jsp" />
 <h3>Digite seu usuário e senha para acessar o banco</h3>
-<form action="/LoginController">
+<form action="/LoginController" method="post">
 	<table>
 		<tr>
 			<td>Usuario:</td>
