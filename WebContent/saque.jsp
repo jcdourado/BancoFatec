@@ -10,7 +10,7 @@
 		</tr>
 		<tr>
 			<td>Descrição:</td>
-			<td><input type="password" name="txtDescricao" size="20">
+			<td><input type="text" name="txtDescricao" size="20">
 		</tr>
 		<tr>
 			<td><input type="submit" name="cmd" value="Saque" ></td>
