@@ -1,0 +1,29 @@
+* {
+margin:0;
+padding:0;
+list-style:none;
+vertical-align:baseline;
+}
+
+.container{
+	margin: 0 15%;
+}
+
+.cabecalho{
+	background: #a7c7dc; /* Old browsers */
+	background: -moz-linear-gradient(top,  #a7c7dc 34%, #85b2d3 51%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top,  #a7c7dc 34%,#85b2d3 51%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom,  #a7c7dc 34%,#85b2d3 51%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a7c7dc', endColorstr='#85b2d3',GradientType=0 ); /* IE6-9 */
+	
+}
+
+.cabecalho--titulo{
+	text-align: center;	
+	padding: 3% 0;
+}
+
+.cabecalho-cliente{
+	text-align: right;
+	margin-right: 2%;	
+}
