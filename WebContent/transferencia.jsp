@@ -1,5 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<% if(session.getAttribute("PERFIL") == null){
+		response.sendRedirect("/BFZL/login.jsp");
+	} %>
 <jsp:include page="cabecalho.jsp" />
 <h3>Informe os dados da conta a ser creditada</h3>
 <form action="TransferenciaController" method="post">

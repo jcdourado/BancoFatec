@@ -41,12 +41,12 @@ public class LoginController extends HttpServlet{
 						Conta conta = daoConta.consultar(uConta.getIdConta());
 						req.getSession().setAttribute("CONTA", conta);
 					}
+					resp.sendRedirect("menu.jsp");
 				}
 			} catch (ClassNotFoundException | SQLException e) {
 				e.printStackTrace();
 			}
 		}
 		
-		resp.sendRedirect("login.jsp");
 	}
 }
