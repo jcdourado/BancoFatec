@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import java.util.List;
 
 import model.Lancamento;
 
@@ -43,5 +44,10 @@ public class LancamentoDao {
 		ps.setDate(7, new Date(l.getDataLancamento().getTime()));
 		ps.setInt(8, l.getId());
 		return ps.execute();
+	}
+	
+	public List<Lancamento> consultar(java.util.Date inicio,java.util.Date fim){
+		Connection con = DBUtil.getDBUtil().getConnection();
+		String sql = "SELECT * FROM LANCAMENTO WHERE DATALANCAMENTO BETWEEN ? AND ?";
 	}
 }

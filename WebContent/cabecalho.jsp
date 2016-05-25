@@ -12,7 +12,7 @@
 <div class="container">
 	<header class="cabecalho">
 		<h1 class="cabecalho--titulo">Banco Fatec - BFZL</h1>
-		<p class="cabecalho--mensagem"><% if(request.getParameter("MENSAGEM") != null) request.getParameter("MENSAGEM"); %></p>
+		<p class="cabecalho--mensagem"><% if(request.getAttribute("MENSAGEM") != null) out.print(request.getAttribute("MENSAGEM")); %></p>
 		<p class="cabecalho-cliente"><%	if(session.getAttribute("USERID") != null){ 
 											String msg = (String) session.getAttribute("USERID");
 											out.print(msg);

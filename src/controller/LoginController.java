@@ -39,7 +39,7 @@ public class LoginController extends HttpServlet{
 					UsuarioConta uConta = daoUsuarioConta.consultar(u.getId());
 					if(uConta != null){
 						Conta conta = daoConta.consultar(uConta.getIdConta());
-						req.getSession().setAttribute("PERFIL", conta);
+						req.getSession().setAttribute("CONTA", conta);
 					}
 				}
 			} catch (ClassNotFoundException | SQLException e) {

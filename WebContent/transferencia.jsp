@@ -2,7 +2,7 @@
     pageEncoding="UTF-8"%>
 <jsp:include page="cabecalho.jsp" />
 <h3>Informe os dados da conta a ser creditada</h3>
-<form action="TransferenciaController">
+<form action="TransferenciaController" method="post">
 	<table>
 		<tr>
 			<td>Numero da Conta:</td>
