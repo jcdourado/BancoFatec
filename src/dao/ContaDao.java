@@ -3,6 +3,7 @@ package dao;
 import java.sql.Connection;
 import java.sql.Date;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 
 import model.Conta;
@@ -49,5 +50,29 @@ public class ContaDao {
 		ps.setString(10, c.getNomeGerente());
 		ps.setInt(11, c.getId());
 		return ps.execute();
+	}
+	
+	public Conta consultar(int idConta) throws ClassNotFoundException, SQLException{
+		Connection con = DBUtil.getDBUtil().getConnection();
+		String sql = "SELECT * FROM CONTA WHERE ID = ?";
+		PreparedStatement ps = con.prepareStatement(sql);
+		ps.setInt(1, idConta);
+		ResultSet rs = ps.executeQuery();
+		if(rs.next()){
+			Conta c= new Conta();
+			c.setId(idConta);
+			c.setTipo(rs.getString("tipo"));
+			c.setNumero(rs.getString("numero"));
+			c.setSaldo(rs.getFloat("saldo"));
+			c.setLimite(rs.getFloat("limite"));
+			c.setTaxaServico(rs.getFloat("taxaservico"));
+			c.setTaxaRendimento(rs.getFloat("taxarendimento"));
+			c.setTaxaJuros(rs.getFloat("taxajuros"));
+			c.setDataAbertura(new java.util.Date(rs.getDate("dataabertura").getTime()));
+			c.setDiaRendimento(rs.getFloat("diarendimento"));
+			c.setNomeGerente(rs.getString("nomegerente"));
+			return c;
+		}
+		return null;
 	}
 }

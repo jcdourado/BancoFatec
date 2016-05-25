@@ -5,7 +5,7 @@
     pageEncoding="UTF-8"%>
 <jsp:include page="cabecalho.jsp" />
 <h3>Informe os dados da conta a ser paga</h3>
-<form action="/ExtratoController">
+<form action="ExtratoController">
 	<table>
 		<tr>
 			<td>Data Início:</td>

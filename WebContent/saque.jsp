@@ -2,7 +2,7 @@
     pageEncoding="UTF-8"%>
 <jsp:include page="cabecalho.jsp" />
 <h3>Informe o valor a ser sacado da Conta</h3>
-<form action="/SaqueController">
+<form action="SaqueController" method="post">
 	<table>
 		<tr>
 			<td>Valor:</td>
